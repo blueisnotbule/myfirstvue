@@ -1,19 +1,22 @@
 <template>
-  <div id="app">
-    <main-tab-bar>
+  <div id="app" class="wrapper">
+    <router-view/>
+    <main-tab-bar/>
   </div>
 </template>
 
 <script>
-import MainTarBarVue from "components/content/maintarbar/MainTarBar.vue";
-export default {
-  name: "App",
-  components: {
-    MainTarBarVue,
-  },
-};
+  import MainTabBar from 'components/content/mainTabbar/MainTabBar'
+
+  export default {
+    name: 'app',
+    components: {
+      MainTabBar
+    }
+  }
 </script>
 
 <style>
-@import "assets/css/base.css";
+  @import "assets/css/base.css";
 </style>
+
